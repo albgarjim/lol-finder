@@ -1,0 +1,66 @@
+{
+    "playerData": {
+        "playerName": "monkaccino",
+        "rolesPlayed": {
+            "top": {
+                "selected": true,
+                "roleInfo": "id-role-top"
+            },
+            "jungle": {
+                "selected": false,
+                "roleInfo": "id-role-jungle"
+            },
+            "mid": {
+                "selected": false,
+                "roleInfo": "id-role-mid"
+            },
+            "adc": {
+                "selected": false,
+                "roleInfo": "id-role-adc"
+            },
+            "support": {
+                "selected": false,
+                "roleInfo": "id-role-support"
+            }
+        },
+        "server": "id-server-euw",
+        "soloQRank": "id-rank-gold-2",
+        "opggData": {
+            "opggURL": "https://discord-url.com",
+            "visible": false
+        }
+    },
+    "lookingFor": {
+        "ladderMode": "id-ladder-soloq",
+        "buddyRank": {
+            "minRank": "id-rank-gold-4",
+            "maxRank": "id-rank-gold-1"
+        },
+        "buddyRoles": {
+            "top": {
+                "selected": false,
+                "roleInfo": "id-role-top"
+            },
+            "jungle": {
+                "selected": false,
+                "roleInfo": "id-role-jungle"
+            },
+            "mid": {
+                "selected": true,
+                "roleInfo": "id-role-mid"
+            },
+            "adc": {
+                "selected": true,
+                "roleInfo": "id-role-adc"
+            },
+            "support": {
+                "selected": true,
+                "roleInfo": "id-role-support"
+            }
+        },
+        "chatUsage": {
+            "discordURL": "https://discord-url.com",
+            "chatUsage": false
+        }
+    }
+}

@@ -16,6 +16,8 @@ func (s *Server) CreateRoutes() {
 	s.User.Handle("/contact/mail", http.HandlerFunc(SendContactMail)).Methods("POST")
 
 	s.User.Handle("/duo", http.HandlerFunc(GetDuoList)).Methods("GET")
+	s.User.Handle("/duo", http.HandlerFunc(CreateDuo)).Methods("POST")
+	s.User.Handle("/duo/{id:.*}", http.HandlerFunc(DeleteDuoByID)).Methods("DELETE")
 
 	s.User.Handle("/test", http.HandlerFunc(TestGetAllColl)).Methods("GET")
 	s.User.Handle("/test", http.HandlerFunc(TestCreateCollById)).Methods("POST")

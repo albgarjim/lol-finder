@@ -8,3 +8,7 @@ func (u *TestObj) ValidateFields() error {
 func (u *ContactMail) ValidateFields() error {
 	return nil
 }
+
+func (u *DuoObj) ValidateFields() error {
+	return nil
+}

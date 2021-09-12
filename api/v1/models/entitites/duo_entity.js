@@ -27,7 +27,7 @@ const duo = {
         server: "id-server-euw",
         soloQRank: "id-rank-gold-2",
         opggData: {
-            opggURL: "https://opgg-url.com",
+            opggURL: "https://discord-url.com",
             visible: false
         }
     },

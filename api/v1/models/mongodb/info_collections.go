@@ -15,7 +15,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func DBRanksCache() (map[string]out.RankObj, error) {
+func DBGetRanks() (map[string]out.RankObj, error) {
 	filter := bson.D{{}}
 	res := map[string]out.RankObj{}
 
@@ -44,7 +44,7 @@ func DBRanksCache() (map[string]out.RankObj, error) {
 	return res, nil
 }
 
-func DBServerCache() (map[string]out.ServerObj, error) {
+func DBGetServers() (map[string]out.ServerObj, error) {
 	filter := bson.D{{}}
 	res := map[string]out.ServerObj{}
 
@@ -74,7 +74,7 @@ func DBServerCache() (map[string]out.ServerObj, error) {
 }
 
 
-func DBLadderCache() (map[string]out.LadderObj, error) {
+func DBGetLadders() (map[string]out.LadderObj, error) {
 	filter := bson.D{{}}
 	res := map[string]out.LadderObj{}
 
@@ -104,7 +104,7 @@ func DBLadderCache() (map[string]out.LadderObj, error) {
 }
 
 
-func DBRoleCache() (map[string]out.RoleObj, error) {
+func DBGetRoles() (map[string]out.RoleObj, error) {
 	filter := bson.D{{}}
 	res := map[string]out.RoleObj{}
 

@@ -12,7 +12,7 @@ import (
 	// "go.mongodb.org/mongo-driver/bson/primitive"
     "go.mongodb.org/mongo-driver/mongo"
 
-	// log "github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 func DBGetDuoList(_p *inp.URLParams) ([]*out.DuoObjComplete, error) {
@@ -65,4 +65,32 @@ func DBGetDuoList(_p *inp.URLParams) ([]*out.DuoObjComplete, error) {
 	}
 
 	return res, nil
+}
+
+func DBDeleteDuoByID(_p *inp.URLParams) (string, error) {
+	objectId, err := GetSingleID((*_p)[inp.QColId])
+	if err != nil{
+		log.Println("Invalid id")
+	}
+	filter := bson.M{"_id": objectId}
+
+	collection := client.Database(fmt.Sprintf("%sleague-service", os.Getenv("DB_ENV"))).Collection(fmt.Sprintf("%sduo", os.Getenv("DB_ENV")))
+
+	_, delError := collection.DeleteMany(context.TODO(), filter)
+	if delError != nil {
+		return "", delError
+	}
+
+	return "collection deleted", nil
+}
+
+func DBCreateDuo(_o inp.DuoObj) (string, error) {
+	collection := client.Database(fmt.Sprintf("%sleague-service", os.Getenv("DB_ENV"))).Collection(fmt.Sprintf("%sduo", os.Getenv("DB_ENV")))
+
+	_, creError := collection.InsertOne(context.TODO(), _o)
+	if creError != nil {
+		return "", creError
+	}
+
+	return "collection created", nil
 }
