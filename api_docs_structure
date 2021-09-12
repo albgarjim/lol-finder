@@ -1,0 +1,184 @@
+-------------------------- functionality
+how to setup go environment
+    -install go (link to official docs)
+    -test to check everything works
+    -vscode addons for golang
+
+how to run the server
+    -where to put the repo
+    -what commands to execute to run it
+    -what things need to be done to ensure it works (logs folder)
+    -config and explanation of the .env file
+
+how the overall flow is structured
+    -login and register
+    -request resource
+    -auth middleware
+    -server obtention of data
+    -processing and formatting
+    -return of the data to the user
+
+
+-------------------------- structure
+api->filter
+    -note: will be removed
+api->handlers
+    -contains the handlers of the api that manages the logic of the route
+    -PUT EXAMPLE HANDLER AND EXPLAIN
+    -receives the parameters responsewriter and request which contains the information of the petition
+    -process
+        -extract parameters from url or request and validate if necessary
+        -connect to database for CRUD operations
+        -convert data format for retrieval if necessary
+        -return the resulting information
+    -gives as output the processed data to send back to the user or returns an error in case something wrong happens
+    -used packages
+        -input and output packages to have access to the entities and data extraction functions
+        -cache in order to have access to the list of cached items
+        -rethinkdb to access the database
+        -filter to process the data of some items
+
+api->input
+    -contains the functions and entities to extract and validate data from requests
+    -receives the request data
+    -process
+        -the package contains a list of keywords for the url, each keyword is checked, extracted and validated
+    -returns the extracted parameters if they are valid or an error if something goes wrong
+    -used packages
+        -utils for the user id extraction from the context
+
+api->output
+    -contains the functions, entities and error codes to format the output from requests
+    -receives a writer with the data to return
+    -process
+        -extracts the writer data
+        -converts it to json using the output entities in the folder
+        -if its an error, returns the error code together with a custom error text depending of each error
+    -returns the response or the error
+    -used packages: none
+
+api->models-cache
+    -contains the item cache, the functions to interact with it and the formatting options for the different outputs that use itemdata
+    -receives a list of item ids to extract
+    -process
+        -obtains the ids from the cache dictionary
+        -if the id doesnt exist, then is looked into the database
+        -a list of items with the complete data from the db is formatted into the required format (list of items, list of items classified by top, bot. outerwear...)
+    -used packages
+        -output to have access to the output structures
+        -utils to have access to the image url encryption functions
+        -rethinkdb to have access to the database in case an item is not in cache
+
+api->models-rethinkdb
+    -contains the queries to communicate with the database and realize CRUD operations
+    -receives an internal dictionary with the parameters required to process the information
+    -process
+        -realizes the single or multiple database calls
+        -formats the information
+        -returns it
+    -used packages
+        -input and output to have access to the entities
+        -utils to have access to the encrypt and set functions
+
+core
+    -contains the initialization config and startup of the server
+    -receives the env file
+    -process
+        -init logs
+        -read env variables
+        -init router
+        -add middleware
+        -create routes
+        -connect to db
+        -run server on port
+
+
+middleware
+    -contains the basic auth middleware for user and admin, json web token auth, facebook login, rate limiter and security
+    -receives a router
+    -relies on output package for response codes and rethinkdb package for the database authentication of the facebook login
+
+utils
+    -contains
+        -logger configuration
+        -encrypt url functions
+        -context storage for user session
+        -set oprations (unique, difference, intersection)
+        -url fetch and post
+    -doesnt rely on any package, its self contained
+
+files scripts
+    -scripts to
+        -launch the docker container
+        -build and push a new container to the repo
+    -.env and dockerfile for configuration
+
+=== folder structure content template
+    -what contains
+    -structure of code
+    -input it receives
+    -function it does
+    -output it generates
+    -packages that uses and why
+
+-------------------------- development
+how to create a route
+    -get
+        -how to extract information from url
+        -how to format the data
+        -how to pass the data to the database
+        -how to format the database response
+        -how to return the data to the user
+    -post/put/patch
+        -how to extract information from body
+        -how to pass this to the database
+        -how to return the response or error
+
+how to modify an entity
+    -golang and entities explanation of json tags
+    -entities located in files body_objects for input and response_objects for output
+    -to add an entity go to the site https://mholt.github.io/json-to-go/ and paste the json of the entity, on the right will appear the golang code for the structure
+    -how to remove fields: remove the fields for the entity (either by erasing the line or commenting it out), go to the functions where the entity is used and remove all the lines of code where the removed field is used
+    -how to use:
+        -paste the golang structure into the input or output file depending of the intent of the structure
+        -copy and paste the code into the file renaming the fiends required
+        -declare the structure and initialize where its required
+
+how to add new middleware
+    -middleware routes are located on the middleware folder
+    -middleware routes have the following structure: MIDDLEWARE STRUCTURE CODE
+    -how to create new one
+        -use the template
+        -access the response and writer resources to get information to the request and process it as required
+    -how to use
+        -in the router initialization (core folder) add the middleware to the router with the Use function; e.g. EXAMPLE CODE ADD MIDDLEWARE TO ROUTER
+
+how to add new route parameters
+    -route template
+    -where to add
+        -declare parameter name in url_params
+        -add to list of variables to check
+        -implement function to validate
+        -when want to use, access the params struct with the field name
+    -how to call route
+    -how to work with parameters in url and in body request
+        -for url use extract url params
+        -for body us extract body params
+        -use the resulting variable as a dictionary
+    -how to integrate database, middleware and entitites
+
+
+
+how to work with login
+    -how is structured
+        -third party library
+        -check if user registered
+        -retrieve user data
+        -add to local storage
+        -return cookie with session data
+        -in next request extract cookie and username with it to validate
+    -what the third party library does
+    -how user is registered
+    -how user is logged in
+    -how session is persisted
+    -how authentication is checked

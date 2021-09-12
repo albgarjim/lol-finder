@@ -1,0 +1,31 @@
+{
+    "name": "invoker-name",
+    "server": "euw",
+    "lanes-played": [
+        "top",
+        "mid",
+        "jungle"
+    ],
+    "league": "gold",
+    "opponentRange": [
+        "silver",
+        "plat"
+    ],
+    "mainChamps": [
+        "jax",
+        "irelia",
+        "fiora",
+        "any"
+    ],
+    "practiceAgainst": [
+        "darius",
+        "garen",
+        "gangplank",
+        "any"
+    ],
+    "winCondition": [
+        "1 kill",
+        "3 kills",
+        "tower down"
+    ]
+}
