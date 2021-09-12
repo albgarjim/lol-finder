@@ -50,6 +50,11 @@ type DuoObj struct {
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
 
+			Fill struct {
+				RoleInfo  string  `bson:"roleInfo"`
+				Selected  bool    `bson:"selected"`
+			} `bson:"fill"`
+
 		} `bson:"rolesPlayed"`
 
 		Server      string       `bson:"server"`
@@ -90,6 +95,11 @@ type DuoObj struct {
 				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
+
+			Fill struct {
+				RoleInfo  string  `bson:"roleInfo"`
+				Selected  bool    `bson:"selected"`
+			} `bson:"fill"`
 
 		} `bson:"buddyRoles"`
 

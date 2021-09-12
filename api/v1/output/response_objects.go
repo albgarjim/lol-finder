@@ -6,13 +6,13 @@ type TestObj struct {
 }
 
 type OpggData struct {
-	OpggURL  string  `bson:"opggURL"`
-	Visible  bool    `bson:"visible"`
+	OpggURL  string  `bson:"opggURL" json:"opggURL"`
+	Visible  bool    `bson:"visible" json:"visible"`
 }
 
 type ChatUsage struct {
-	DiscordURL   string   `bson:"discordURL"`
-	Usage     bool     `bson:"chatUsage"`
+	DiscordURL   string   `bson:"discordURL" json:"discordURL"`
+	Usage     bool     `bson:"chatUsage" json:"usage"`
 }
 
 type DuoObj struct {
@@ -44,6 +44,11 @@ type DuoObj struct {
 				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
+
+			Fill struct {
+				RoleInfo  string  `bson:"roleInfo"`
+				Selected  bool    `bson:"selected"`
+			} `bson:"fill"`
 
 		} `bson:"rolesPlayed"`
 
@@ -85,6 +90,11 @@ type DuoObj struct {
 				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
+
+			Fill struct {
+				RoleInfo  string  `bson:"roleInfo"`
+				Selected  bool    `bson:"selected"`
+			} `bson:"fill"`
 
 		} `bson:"buddyRoles"`
 
@@ -148,6 +158,11 @@ type DuoObjComplete struct {
 				Selected  bool    `json:"selected"`
 			} `json:"support"`
 
+			Fill struct {
+				RoleInfo  RoleObj  `json:"roleInfo"`
+				Selected  bool    `json:"selected"`
+			} `json:"fill"`
+
 		} `json:"rolesPlayed"`
 
 		Server      ServerObj    `json:"server"`
@@ -188,6 +203,11 @@ type DuoObjComplete struct {
 				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"support"`
+
+			Fill struct {
+				RoleInfo  RoleObj  `json:"roleInfo"`
+				Selected  bool    `json:"selected"`
+			} `json:"fill"`
 
 		} `json:"buddyRoles"`
 

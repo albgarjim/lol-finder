@@ -22,6 +22,10 @@ const duo = {
             support: {
                 selected: false,
                 roleInfo: "id-role-support"
+            },
+            fill: {
+                selected: false,
+                roleInfo: "id-role-fill"
             }
         },
         server: "id-server-euw",
@@ -35,7 +39,7 @@ const duo = {
         ladderMode: "id-ladder-soloq",
         buddyRank: {
             minRank: "id-rank-gold-4",
-            maxRank: "id-rank-gold-1",
+            maxRank: "id-rank-gold-1"
         },
         buddyRoles: {
             top: {
@@ -57,6 +61,10 @@ const duo = {
             support: {
                 selected: true,
                 roleInfo: "id-role-support"
+            },
+            fill: {
+                selected: false,
+                roleInfo: "id-role-fill"
             }
         },
         chatUsage: {
@@ -70,137 +78,137 @@ const ranksdb = [
     {
         _id: "id-rank-iron-4",
         label: "Iron 4",
-        img: "http://img-rank-iron-4-url.com"
+        img: "/lol-ranks/iron-4.png"
     },
     {
         _id: "id-rank-iron-3",
         label: "Iron 3",
-        img: "http://img-rank-iron-3-url.com"
+        img: "/lol-ranks/iron-3.png"
     },
     {
         _id: "id-rank-iron-2",
         label: "Iron 2",
-        img: "http://img-rank-iron-2-url.com"
+        img: "/lol-ranks/iron-2.png"
     },
     {
         _id: "id-rank-iron-1",
         label: "Iron 1",
-        img: "http://img-rank-iron-1-url.com"
+        img: "/lol-ranks/iron-1.png"
     },
     {
         _id: "id-rank-bronze-4",
         label: "Bronze 4",
-        img: "http://img-rank-bronze-4-url.com"
+        img: "/lol-ranks/bronze-4.png"
     },
     {
         _id: "id-rank-bronze-3",
         label: "Bronze 3",
-        img: "http://img-rank-bronze-3-url.com"
+        img: "/lol-ranks/bronze-3.png"
     },
     {
         _id: "id-rank-bronze-2",
         label: "Bronze 2",
-        img: "http://img-rank-bronze-2-url.com"
+        img: "/lol-ranks/bronze-2.png"
     },
     {
         _id: "id-rank-bronze-1",
         label: "Bronze 1",
-        img: "http://img-rank-bronze-1-url.com"
+        img: "/lol-ranks/bronze-1.png"
     },
     {
         _id: "id-rank-silver-4",
         label: "Silver 4",
-        img: "http://img-rank-silver-4-url.com"
+        img: "/lol-ranks/silver-4.png"
     },
     {
         _id: "id-rank-silver-3",
         label: "Silver 3",
-        img: "http://img-rank-silver-3-url.com"
+        img: "/lol-ranks/silver-3.png"
     },
     {
         _id: "id-rank-silver-2",
         label: "Silver 2",
-        img: "http://img-rank-silver-2-url.com"
+        img: "/lol-ranks/silver-2.png"
     },
     {
         _id: "id-rank-silver-1",
         label: "Silver 1",
-        img: "http://img-rank-silver-1-url.com"
+        img: "/lol-ranks/silver-1.png"
     },
     {
         _id: "id-rank-gold-4",
         label: "Gold 4",
-        img: "http://img-rank-gold-4-url.com"
+        img: "/lol-ranks/gold-4.png"
     },
     {
         _id: "id-rank-gold-3",
         label: "Gold 3",
-        img: "http://img-rank-gold-3-url.com"
+        img: "/lol-ranks/gold-3.png"
     },
     {
         _id: "id-rank-gold-2",
         label: "Gold 2",
-        img: "http://img-rank-gold-2-url.com"
+        img: "/lol-ranks/gold-2.png"
     },
     {
         _id: "id-rank-gold-1",
         label: "Gold 1",
-        img: "http://img-rank-gold-1-url.com"
+        img: "/lol-ranks/gold-1.png"
     },
     {
         _id: "id-rank-platinum-4",
         label: "Platinum 4",
-        img: "http://img-rank-platinum-4-url.com"
+        img: "/lol-ranks/platinum-4.png"
     },
     {
         _id: "id-rank-platinum-3",
         label: "Platinum 3",
-        img: "http://img-rank-platinum-3-url.com"
+        img: "/lol-ranks/platinum-3.png"
     },
     {
         _id: "id-rank-platinum-2",
         label: "Platinum 2",
-        img: "http://img-rank-platinum-2-url.com"
+        img: "/lol-ranks/platinum-2.png"
     },
     {
         _id: "id-rank-platinum-1",
         label: "Platinum 1",
-        img: "http://img-rank-platinum-1-url.com"
+        img: "/lol-ranks/platinum-1.png"
     },
     {
         _id: "id-rank-diamond-4",
         label: "Diamond 4",
-        img: "http://img-rank-diamond-4-url.com"
+        img: "/lol-ranks/diamond-4.png"
     },
     {
         _id: "id-rank-diamond-3",
         label: "Diamond 3",
-        img: "http://img-rank-diamond-3-url.com"
+        img: "/lol-ranks/diamond-3.png"
     },
     {
         _id: "id-rank-diamond-2",
         label: "Diamond 2",
-        img: "http://img-rank-diamond-2-url.com"
+        img: "/lol-ranks/diamond-2.png"
     },
     {
         _id: "id-rank-diamond-1",
         label: "Diamond 1",
-        img: "http://img-rank-diamond-1-url.com"
+        img: "/lol-ranks/diamond-1.png"
     },
     {
         _id: "id-rank-master",
         label: "Master",
-        img: "http://img-rank-master-url.com"
+        img: "/lol-ranks/master.png"
     },
     {
         _id: "id-rank-grandmaster",
         label: "Grandmaster",
-        img: "http://img-rank-grandmaster-url.com"
+        img: "/lol-ranks/grandmaster.png"
     },
     {
         _id: "id-rank-challenger",
         label: "Challenger",
-        img: "http://img-rank-challenger-url.com"
+        img: "/lol-ranks/challenger.png"
     }
 ]
 
@@ -305,26 +313,31 @@ const rolesDB = [
     {
         _id: "id-role-top",
         label: "Top",
-        img: "http://img-top-role-url.com"
+        img: "/lol-roles/role-top.png"
     },
     {
         _id: "id-role-jungle",
         label: "Jungle",
-        img: "http://img-jungle-role-url.com"
+        img: "/lol-roles/role-jungle.png"
     },
     {
         _id: "id-role-mid",
         label: "Mid",
-        img: "http://img-mid-role-url.com"
+        img: "/lol-roles/role-mid.png"
     },
     {
         _id: "id-role-adc",
         label: "Adc",
-        img: "http://img-adc-role-url.com"
+        img: "/lol-roles/role-adc.png"
     },
     {
         _id: "id-role-support",
         label: "Support",
-        img: "http://img-support-role-url.com"
+        img: "/lol-roles/role-support.png"
+    },
+    {
+        _id: "id-role-fill",
+        label: "Fill",
+        img: "/lol-roles/role-fill.png"
     },
 ]
