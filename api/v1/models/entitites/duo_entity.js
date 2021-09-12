@@ -5,34 +5,34 @@ const duo = {
         rolesPlayed: {
             top: {
                 selected: true,
-                laneInfo: "id-lane-top"
+                roleInfo: "id-role-top"
             },
             jungle: {
                 selected: false,
-                laneInfo: "id-lane-jungle"
+                roleInfo: "id-role-jungle"
             },
             mid: {
                 selected: false,
-                laneInfo: "id-lane-mid"
+                roleInfo: "id-role-mid"
             },
             adc: {
                 selected: false,
-                laneInfo: "id-lane-adc"
+                roleInfo: "id-role-adc"
             },
             support: {
                 selected: false,
-                laneInfo: "id-lane-support"
+                roleInfo: "id-role-support"
             }
         },
         server: "id-server-euw",
         soloQRank: "id-rank-gold-2",
         opggData: {
-            opggURL: "",
+            opggURL: "https://opgg-url.com",
             visible: false
         }
     },
     lookingFor: {
-        gameMode: "id-ladder-soloq",
+        ladderMode: "id-ladder-soloq",
         buddyRank: {
             minRank: "id-rank-gold-4",
             maxRank: "id-rank-gold-1",
@@ -40,27 +40,27 @@ const duo = {
         buddyRoles: {
             top: {
                 selected: false,
-                laneInfo: "id-lane-top"
+                roleInfo: "id-role-top"
             },
             jungle: {
                 selected: false,
-                laneInfo: "id-lane-jungle"
+                roleInfo: "id-role-jungle"
             },
             mid: {
                 selected: true,
-                laneInfo: "id-lane-mid"
+                roleInfo: "id-role-mid"
             },
             adc: {
                 selected: true,
-                laneInfo: "id-lane-adc"
+                roleInfo: "id-role-adc"
             },
             support: {
                 selected: true,
-                laneInfo: "id-lane-support"
+                roleInfo: "id-role-support"
             }
         },
         chatUsage: {
-            discordURL: "",
+            discordURL: "https://discord-url.com",
             chatUsage: false
         }
     }
@@ -303,28 +303,28 @@ const laddersDB = [
 
 const rolesDB = [
     {
-        _id: "id-lane-top",
+        _id: "id-role-top",
         label: "Top",
-        img: "http://img-top-lane-url.com"
+        img: "http://img-top-role-url.com"
     },
     {
-        _id: "id-lane-jungle",
+        _id: "id-role-jungle",
         label: "Jungle",
-        img: "http://img-jungle-lane-url.com"
+        img: "http://img-jungle-role-url.com"
     },
     {
-        _id: "id-lane-mid",
+        _id: "id-role-mid",
         label: "Mid",
-        img: "http://img-mid-lane-url.com"
+        img: "http://img-mid-role-url.com"
     },
     {
-        _id: "id-lane-adc",
+        _id: "id-role-adc",
         label: "Adc",
-        img: "http://img-adc-lane-url.com"
+        img: "http://img-adc-role-url.com"
     },
     {
-        _id: "id-lane-support",
+        _id: "id-role-support",
         label: "Support",
-        img: "http://img-support-lane-url.com"
+        img: "http://img-support-role-url.com"
     },
 ]

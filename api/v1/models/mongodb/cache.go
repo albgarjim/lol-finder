@@ -20,7 +20,7 @@ var RoleCache = map[string]out.RoleObj{}
 func InitCache() {
 	var err error
 
-	if RankCache, err = DBGetRanks(); err != nil {
+	if RankCache, err = DBRanksCache(); err != nil {
 		log.Fatal("Rank cache not initialized: ", err)
 		return
 	}

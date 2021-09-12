@@ -21,27 +21,27 @@ type DuoObj struct {
 		PlayerName     string       `bson:"playerName"`
 		RolesPlayed struct {
 			Top struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"top"`
 
 			Jungle struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"jungle"`
 
 			Mid struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"mid"`
 
 			Adc struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"adc"`
 
 			Support struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
 
@@ -54,7 +54,7 @@ type DuoObj struct {
 	} `bson:"playerData"`
 
 	LookingFor struct {
-		GameMode   string  `bson:"gameMode"`
+		LadderMode   string  `bson:"ladderMode"`
 		BuddyRank struct {
 			MinRank  string  `bson:"minRank"`
 			MaxRank  string  `bson:"maxRank"`
@@ -62,27 +62,27 @@ type DuoObj struct {
 
 		BuddyRoles struct {
 			Top struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"top"`
 
 			Jungle struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"jungle"`
 
 			Mid struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"mid"`
 
 			Adc struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"adc"`
 
 			Support struct {
-				LaneInfo  string  `bson:"laneInfo"`
+				RoleInfo  string  `bson:"roleInfo"`
 				Selected  bool    `bson:"selected"`
 			} `bson:"support"`
 
@@ -124,27 +124,27 @@ type DuoObjComplete struct {
 		PlayerName     string       `json:"playerName"`
 		RolesPlayed struct {
 			Top struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"top"`
 
 			Jungle struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"jungle"`
 
 			Mid struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"mid"`
 
 			Adc struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"adc"`
 
 			Support struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"support"`
 
@@ -157,7 +157,7 @@ type DuoObjComplete struct {
 	} `json:"playerData"`
 
 	LookingFor struct {
-		GameMode   LadderObj  `json:"gameMode"`
+		LadderMode   LadderObj  `json:"ladderMode"`
 		BuddyRank struct {
 			MinRank  RankObj  `json:"minRank"`
 			MaxRank  RankObj  `json:"maxRank"`
@@ -165,27 +165,27 @@ type DuoObjComplete struct {
 
 		BuddyRoles struct {
 			Top struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"top"`
 
 			Jungle struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"jungle"`
 
 			Mid struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"mid"`
 
 			Adc struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"adc"`
 
 			Support struct {
-				LaneInfo  RoleObj  `json:"laneInfo"`
+				RoleInfo  RoleObj  `json:"roleInfo"`
 				Selected  bool    `json:"selected"`
 			} `json:"support"`
 

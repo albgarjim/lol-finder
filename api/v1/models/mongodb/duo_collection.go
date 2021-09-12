@@ -35,26 +35,26 @@ func DBGetDuoList(_p *inp.URLParams) ([]*out.DuoObjComplete, error) {
 		}
 		o.ID = t.ID
 		o.PlayerData.PlayerName = t.PlayerData.PlayerName
-		o.PlayerData.RolesPlayed.Top.LaneInfo = RoleCache[t.PlayerData.RolesPlayed.Top.LaneInfo]
-		o.PlayerData.RolesPlayed.Jungle.LaneInfo = RoleCache[t.PlayerData.RolesPlayed.Jungle.LaneInfo]
-		o.PlayerData.RolesPlayed.Mid.LaneInfo = RoleCache[t.PlayerData.RolesPlayed.Mid.LaneInfo]
-		o.PlayerData.RolesPlayed.Adc.LaneInfo = RoleCache[t.PlayerData.RolesPlayed.Adc.LaneInfo]
-		o.PlayerData.RolesPlayed.Support.LaneInfo = RoleCache[t.PlayerData.RolesPlayed.Support.LaneInfo]
+		o.PlayerData.RolesPlayed.Top.RoleInfo = RoleCache[t.PlayerData.RolesPlayed.Top.RoleInfo]
+		o.PlayerData.RolesPlayed.Jungle.RoleInfo = RoleCache[t.PlayerData.RolesPlayed.Jungle.RoleInfo]
+		o.PlayerData.RolesPlayed.Mid.RoleInfo = RoleCache[t.PlayerData.RolesPlayed.Mid.RoleInfo]
+		o.PlayerData.RolesPlayed.Adc.RoleInfo = RoleCache[t.PlayerData.RolesPlayed.Adc.RoleInfo]
+		o.PlayerData.RolesPlayed.Support.RoleInfo = RoleCache[t.PlayerData.RolesPlayed.Support.RoleInfo]
 		o.PlayerData.SoloQRank = RankCache[t.PlayerData.SoloQRank]
 		res = append(res, o)
 
 		o.PlayerData.Server = ServerCache[t.PlayerData.Server]
 		o.PlayerData.OpggData = t.PlayerData.OpggData
 
-		o.LookingFor.GameMode =  LadderCache[t.LookingFor.GameMode]
+		o.LookingFor.LadderMode =  LadderCache[t.LookingFor.LadderMode]
 		o.LookingFor.BuddyRank.MinRank =  RankCache[t.LookingFor.BuddyRank.MinRank]
 		o.LookingFor.BuddyRank.MaxRank =  RankCache[t.LookingFor.BuddyRank.MaxRank]
 
-		o.LookingFor.BuddyRoles.Top.LaneInfo = RoleCache[t.LookingFor.BuddyRoles.Top.LaneInfo]
-		o.LookingFor.BuddyRoles.Jungle.LaneInfo = RoleCache[t.LookingFor.BuddyRoles.Jungle.LaneInfo]
-		o.LookingFor.BuddyRoles.Mid.LaneInfo = RoleCache[t.LookingFor.BuddyRoles.Mid.LaneInfo]
-		o.LookingFor.BuddyRoles.Adc.LaneInfo = RoleCache[t.LookingFor.BuddyRoles.Adc.LaneInfo]
-		o.LookingFor.BuddyRoles.Support.LaneInfo = RoleCache[t.LookingFor.BuddyRoles.Support.LaneInfo]
+		o.LookingFor.BuddyRoles.Top.RoleInfo = RoleCache[t.LookingFor.BuddyRoles.Top.RoleInfo]
+		o.LookingFor.BuddyRoles.Jungle.RoleInfo = RoleCache[t.LookingFor.BuddyRoles.Jungle.RoleInfo]
+		o.LookingFor.BuddyRoles.Mid.RoleInfo = RoleCache[t.LookingFor.BuddyRoles.Mid.RoleInfo]
+		o.LookingFor.BuddyRoles.Adc.RoleInfo = RoleCache[t.LookingFor.BuddyRoles.Adc.RoleInfo]
+		o.LookingFor.BuddyRoles.Support.RoleInfo = RoleCache[t.LookingFor.BuddyRoles.Support.RoleInfo]
 
 		o.LookingFor.ChatUsage = t.LookingFor.ChatUsage
 	}

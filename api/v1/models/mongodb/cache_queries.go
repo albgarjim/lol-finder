@@ -15,7 +15,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func DBGetRanks() (map[string]out.RankObj, error) {
+func DBRanksCache() (map[string]out.RankObj, error) {
 	filter := bson.D{{}}
 	res := map[string]out.RankObj{}
 
