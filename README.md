@@ -191,35 +191,17 @@ The following documentation assumes previous knowledge of:
 
 Those are the core resources of the REST API and the routes used to modify them
 
-| Resource    | Route                             | Method | Information                               | Params                |
-| :---------- | :-------------------------------- | :----: | :---------------------------------------- | :-------------------- |
-| collections | `/api/v1/GtS2Fa`                  |  GET   | Returns the collection names.             |                       |
-| collections | `/api/v1/5JUSUk`                  |  GET   | Returns all items collections.            | collection_id         |
-| collections | `/api/v1/5JUSUk/l9ew8v`           |  GET   | Items collections overview.               | collection_id         |
-| collections | `/api/v1/5JUSUk/3fj48f`           |  GET   | Returns three items fron new collections. |                       |
-| ideas       | `/api/v1/AcD9pq`                  |  GET   | Returns styng ideas of a user.            |                       |
-| ideas       | `/api/v1/AcD9pq/8g73jg`           |  GET   | Returns liked styling ideas.              |                       |
-| ideas       | `/api/v1/AcD9pq/j3f84f`           |  GET   | Returns disliked styling ideas.           |                       |
-| ideas       | `/api/v1/AcD9pq/MtcZ29`           |  GET   | Returns styling ideas properties.         | idea                  |
-| ideas       | `/api/v1/AcD9pq`                  | PATCH  | Updates idea to liked state.              | ideaName & ideaStatus |
-| ideas       | `/api/v1/AcD9pq/PgwS23`           | PATCH  | Updates idea to seen state.               | ideaName              |
-| ideas       | `/api/v1/AcD9pq/gmr9qj`           |  GET   | Returns items of ideas.                   |                       |
-| picks       | `/api/v1/nv2sdo/82fj93`           |  GET   | Returns new picks.                        |                       |
-| picks       | `/api/v1/nv2sdo/zw4w84`           |  GET   | Returns old picks.                        |                       |
-| wishlist    | `/api/v1/BiT7gF/{ITEM_ID}`        | DELETE | Deletes item from wishlist.               |                       |
-| wishlist    | `/api/v1/BiT7gF/{ITEM_ID}`        |  GET   | Returns wishlist.                         |                       |
-| Wishlist    | `/api/v1/BiT7gF/j3f84f`           |  GET   | Returns disliked items.                   |                       |
-| wishlist    | `/api/v1/BiT7gF`                  | PATCH  | Adds item to wishlist.                    | itemid struct         |
-| items       | `/api/v1/5JUSUk/{ITEM_ID}`        | DELETE | Deletes item from wishlist.               |                       |
-| items       | `/api/v1/5JUSUk/gmr9qj/{ITEM_ID}` |  GET   | Returns single item.                      |                       |
-| user        | `/api/v1/Pq3Gm9`                  | PATCH  | Updates userData.                         |                       |
-| user        | `/api/v1/Pq3Gm9/j484hs`           |  GET   | Returns  user preferences.                |                       |
-| login       | `/api/v1/G35df2/Pdfe32`           |  POST  | post login.                               | code & state          |
-| mailchimp   | `/api/v1/FIYnCI/t3Sf9a`           |  POST  | mailchimp subscription.                   |                       |
-| survey      | `/api/v1/nZiejS`                  |  POST  | post survey.                              |                       |
-| wardrobe    | `/api/v1/jfm2gw`                  |  GET   | Returns wardrobe.                         |                       |
-| stylist     | `/api/v1/ZQdG8p`                  |  GET   | Returns stylist data.                     |                       |
-| creator     | `/api/v1/abc`                     |  GET   | Returns arrivals from about you.          | aylimit & aypage      |
+| Resource | Route                   | Method | Information                               | Params        |
+| :------- | :---------------------- | :----: | :---------------------------------------- | :------------ |
+| duos     | `/api/v1/duo`           |  GET   | Returns the information of duos.          |               |
+| duos     | `/api/v1/duo`           |  POST  | Create a new duo.                         |               |
+| duos     | `/api/v1/duo/<id>`      | DELETE | Delete a duo.                             | collection_id |
+| test     | `/api/v1/5JUSUk/3fj48f` |  GET   | Returns three items fron new collections. |               |
+| test     | `/api/v1/test`          |  GET   | Returns styng ideas of a user.            |               |
+| test     | `/api/v1/test`          |  POST  | Creates test resource.                    |               |
+| test     | `/api/v1/test/<id>`     |  GET   | Returns test resource by id.              | collection_id |
+| test     | `/api/v1/test/<id>`     | PATCH  | Updates test resource by id.              | collection_id |
+| ideas    | `/api/v1/test/<id>`     | DELETE | Deletes test resource.                    | collection_id |
 
 
 ## License

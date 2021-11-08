@@ -6,5 +6,5 @@ fi
 echo "Building go app"
 CGO_ENABLED=0 go build
 
-sudo docker build -t registry.gitlab.com/lol-finder-project/lol-api:$1 .
-sudo docker push registry.gitlab.com/lol-finder-project/lol-api:$1
+sudo docker build -t registry.gitlab.com/lol-finder-project/lol-api/$1 .
+sudo docker push registry.gitlab.com/lol-finder-project/lol-api/$1
