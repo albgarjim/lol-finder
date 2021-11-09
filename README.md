@@ -196,8 +196,7 @@ Those are the core resources of the REST API and the routes used to modify them
 | duos     | `/api/v1/duo`           |  GET   | Returns the information of duos.          |               |
 | duos     | `/api/v1/duo`           |  POST  | Create a new duo.                         |               |
 | duos     | `/api/v1/duo/<id>`      | DELETE | Delete a duo.                             | collection_id |
-| test     | `/api/v1/5JUSUk/3fj48f` |  GET   | Returns three items fron new collections. |               |
-| test     | `/api/v1/test`          |  GET   | Returns styng ideas of a user.            |               |
+| test     | `/api/v1/test`          |  GET   | Returns test resource.            |               |
 | test     | `/api/v1/test`          |  POST  | Creates test resource.                    |               |
 | test     | `/api/v1/test/<id>`     |  GET   | Returns test resource by id.              | collection_id |
 | test     | `/api/v1/test/<id>`     | PATCH  | Updates test resource by id.              | collection_id |
